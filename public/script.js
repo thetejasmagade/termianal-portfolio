@@ -57,7 +57,7 @@ $(document).ready(() => {
 02762001    [[b;lightgreen;]LISCENCE]
 91000494    README.md
 
-Note:- This is just for fun this is not a real directories/machine.
+Note:- This is just for fun this is not a real directories nor a real machine.
            `);
       },
       help: function () {
@@ -68,14 +68,46 @@ Note:- This is just for fun this is not a real directories/machine.
    [[b;orange;]help] - to see the commands available on this machine       
    [[b;orange;]ls] - to see resources on this machine (Note: just for fun)
    [[b;orange;]clear] - to clear the terminal 
-   [[b;orange;]add ][[b;white;]number1 number2] - to add given two numbers as arguments
-   [[b;orange;]sub ][[b;white;]number1 number2] - to subtract given two numbers as arguments
-   [[b;orange;]mult ][[b;white;]number1 number2] - to multiply given two numbers as arguments
-   [[b;orange;]div ][[b;white;]number1 number2] - to divide given two numbers as arguments
+   [[b;orange;]add ][[b;white;]<number1> <number2>] - to add given two numbers as arguments
+   [[b;orange;]sub ][[b;white;]<number1> <number2>] - to subtract given two numbers as arguments
+   [[b;orange;]mult ][[b;white;]<number1> <number2>] - to multiply given two numbers as arguments
+   [[b;orange;]div ][[b;white;]<number1> <number2>] - to divide given two numbers as arguments
+   [[b;orange;]border ][[b;white;]<color>] - to see colored border around terminal [[[b;red;]d][[b;purple;]i][[b;blue;]s][[b;pink;]c][[b;yellow;]o], black, red, orange, yellow, green, blue, pink, purple]
             `)
       },
-      contact: function () {
+      contact: function() {
          this.echo("")
+      },
+      border: function(value) {
+         if(value == "red"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "red")
+         } else if(value == "orange"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "orange")
+         } else if(value == "black"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "black")
+         } else if(value == "yellow"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "yellow")
+         } else if(value == "green"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "green")
+         } else if(value == "blue"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "blue")
+         } else if(value == "pink"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "pink")
+         } else if(value == "purple"){
+            $('html').removeClass('disco-light')
+            $('html').css("background-color", "purple")
+         } else if(value == "disco"){
+            $('html').addClass('disco-light')
+         } else {
+            this.echo("[[b;red;]Entered wrong Color. Please insert write Color.]");
+         }
       }
    }, {
       name: 'Tejas Magade',
