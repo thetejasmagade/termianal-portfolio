@@ -1,9 +1,5 @@
+
 $(document).ready(() => {
-   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      jQuery('#mobile').show();
-   } else {
-      jQuery('#desktop').show();
-   }
    $('#terminal').terminal({
       open: function (value) {
          this.echo('Hello, My name is "Tejas Magade"')
@@ -65,20 +61,30 @@ Note:- This is just for fun this is not a real directories nor a real machine.
       help: function () {
          this.echo(`Available Commands:
    [[b;orange;]whoami] - to read something about me
-   [[b;orange;]contact] - to read something about me
-   [[b;orange;]name] - to see my name
+   [[b;orange;]contact] - to contact me
+   [[b;orange;]projects] - to see my previously created projects
+   [[b;orange;]name] - to see my name in interactive way
    [[b;orange;]help] - to see the commands available on this machine       
    [[b;orange;]ls] - to see resources on this machine (Note: just for fun)
    [[b;orange;]clear] - to clear the terminal 
+   [[b;orange;]border ][[b;white;]<color>] - to see colored border around terminal [[[b;red;]d][[b;purple;]i][[b;blue;]s][[b;pink;]c][[b;yellow;]o], remove, red, orange, yellow, green, blue, pink, purple]
    [[b;orange;]add ][[b;white;]<number1> <number2>] - to add given two numbers as arguments
    [[b;orange;]sub ][[b;white;]<number1> <number2>] - to subtract given two numbers as arguments
    [[b;orange;]mult ][[b;white;]<number1> <number2>] - to multiply given two numbers as arguments
    [[b;orange;]div ][[b;white;]<number1> <number2>] - to divide given two numbers as arguments
-   [[b;orange;]border ][[b;white;]<color>] - to see colored border around terminal [[[b;red;]d][[b;purple;]i][[b;blue;]s][[b;pink;]c][[b;yellow;]o], remove, red, orange, yellow, green, blue, pink, purple]
             `)
       },
-      contact: function () {
-         this.echo("")
+      contact: function() {
+         this.echo(`Get in touch via: 
+      Email:         magadetejas5@gmail.com
+      Contact:       +91 8433887822
+      Github:        @thetejasmagade
+      Linkedin:      @thetejasmagade
+      Blogs:         https://programtuts.com/
+      Instagram:     Don't have an account
+      Facebook:      ---------//---------
+      Twitter:       ---------//---------
+         `)
       },
       border: function (value) {
          if (value == "red") {
@@ -110,6 +116,25 @@ Note:- This is just for fun this is not a real directories nor a real machine.
          } else {
             this.echo("[[b;red;]Entered wrong Color. Please insert write Color.]");
          }
+      },
+      projects: function() {
+         this.echo(`Projects Developed by Me:
+      ╔═══════════════════════════╤════════════════════════════╤══════════════════════════════════════════════════════╗
+      ║ [[b;pink;]Name]                      │ [[b;pink;]Technologies used]          │ [[b;pink;]Link]                                                 ║
+      ╠═══════════════════════════╪════════════════════════════╪══════════════════════════════════════════════════════╣
+      ║ Bulma Blocks              │ Vue, Nuxt                       │ https://github.com/thetejasmagade/bulma-blocks-dev   ║
+      ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
+      ║ VCode                     │ Vue, Django REST Framework │ https://github.com/thetejasmagade/vcode              ║
+      ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
+      ║ Personal Portfolio        │ Vue, Tailwind CSS          │ https://github.com/thetejasmagade/personal-portfolio ║
+      ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
+      ║ Terminal Portfolio (this) │ JQuery                     │ https://github.com/thetejasmagade/terminal-portfolio ║
+      ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
+      ║ Text Formatter            │ Django                     │ https://github.com/thetejasmagade/text-formatter     ║
+      ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
+      ║ Weather App               │ Django                     │ https://github.com/thetejasmagade/Weather-App        ║
+      ╚═══════════════════════════╧════════════════════════════╧══════════════════════════════════════════════════════╝ 
+      `)
       }
    }, {
       name: 'Tejas Magade',
