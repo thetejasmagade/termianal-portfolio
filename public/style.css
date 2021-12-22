@@ -119,3 +119,14 @@
 		background-position: 0% 50%;
 	}
 }
+
+
+@media all and (min-width: 480px) {
+    .content-desktop {display:block;}
+    .content-mobile {display:none;}
+}
+
+@media all and (max-width: 479px) {
+    .content-desktop {display:none;}
+    .content-mobile {display:block;}
+}

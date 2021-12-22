@@ -1,7 +1,9 @@
 $(document).ready(() => {
-   var contact_name = "";
-   var contact_email = "";
-   var contact_message = "";
+   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      jQuery('#mobile').show();
+   } else {
+      jQuery('#desktop').show();
+   }
    $('#terminal').terminal({
       open: function (value) {
          this.echo('Hello, My name is "Tejas Magade"')
@@ -72,38 +74,38 @@ Note:- This is just for fun this is not a real directories nor a real machine.
    [[b;orange;]sub ][[b;white;]<number1> <number2>] - to subtract given two numbers as arguments
    [[b;orange;]mult ][[b;white;]<number1> <number2>] - to multiply given two numbers as arguments
    [[b;orange;]div ][[b;white;]<number1> <number2>] - to divide given two numbers as arguments
-   [[b;orange;]border ][[b;white;]<color>] - to see colored border around terminal [[[b;red;]d][[b;purple;]i][[b;blue;]s][[b;pink;]c][[b;yellow;]o], black, red, orange, yellow, green, blue, pink, purple]
+   [[b;orange;]border ][[b;white;]<color>] - to see colored border around terminal [[[b;red;]d][[b;purple;]i][[b;blue;]s][[b;pink;]c][[b;yellow;]o], remove, red, orange, yellow, green, blue, pink, purple]
             `)
       },
-      contact: function() {
+      contact: function () {
          this.echo("")
       },
-      border: function(value) {
-         if(value == "red"){
+      border: function (value) {
+         if (value == "red") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "red")
-         } else if(value == "orange"){
+         } else if (value == "orange") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "orange")
-         } else if(value == "black"){
+         } else if (value == "remove") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "black")
-         } else if(value == "yellow"){
+         } else if (value == "yellow") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "yellow")
-         } else if(value == "green"){
+         } else if (value == "green") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "green")
-         } else if(value == "blue"){
+         } else if (value == "blue") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "blue")
-         } else if(value == "pink"){
+         } else if (value == "pink") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "pink")
-         } else if(value == "purple"){
+         } else if (value == "purple") {
             $('html').removeClass('disco-light')
             $('html').css("background-color", "purple")
-         } else if(value == "disco"){
+         } else if (value == "disco") {
             $('html').addClass('disco-light')
          } else {
             this.echo("[[b;red;]Entered wrong Color. Please insert write Color.]");
