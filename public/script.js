@@ -120,9 +120,9 @@ Note:- This is just for fun this is not a real directories nor a real machine.
       projects: function() {
          this.echo(`Projects Developed by Me:
       ╔═══════════════════════════╤════════════════════════════╤══════════════════════════════════════════════════════╗
-      ║ [[b;pink;]Name]                      │ [[b;pink;]Technologies used]          │ [[b;pink;]Link]                                                 ║
+      ║ [[b;pink;]Name]                      │ [[b;pink;]Technologies used]          │ [[b;pink;]Link]                ║
       ╠═══════════════════════════╪════════════════════════════╪══════════════════════════════════════════════════════╣
-      ║ Bulma Blocks              │ Vue, Nuxt                       │ https://github.com/thetejasmagade/bulma-blocks-dev   ║
+      ║ Bulma Blocks              │ Vue, Nuxt                  │ https://github.com/thetejasmagade/bulma-blocks-dev   ║
       ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
       ║ VCode                     │ Vue, Django REST Framework │ https://github.com/thetejasmagade/vcode              ║
       ╟───────────────────────────┼────────────────────────────┼──────────────────────────────────────────────────────╢
